@@ -1,0 +1,26 @@
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+#cabecalho-titulo {
+    font-weight: bold;
+    color: rgb(18, 14, 66);
+    font-family: 'Orbitron', sans-serif;
+}
+
+#cabecalho-titulo:before {
+    content: '< ';
+}
+
+#cabecalho-titulo:after {
+    content: ' />';
+}
+
+.cabecalho-link:hover {
+    background-image: linear-gradient(rgb(179, 114, 179), 2%, white);
+    font-weight: bold;
+    color: #fff;
+}

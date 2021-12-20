@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} DEV SRN {% endblock %}
+
+{%block linkCabecalho%} <a class="nav-link cabecalho-link" href="#">Sobre Nós</a> {% endblock %}
+
+{% block conteudo %}
+
+{% for post in post_list %}
+
+<section class="post">
+    <a href="{{ post.get_absolute_url }}">
+        <h3 class="titulo-post">{{post.title}}</h3>
+        <p class="detalhes-criacao-post">Criado em {{post.created}}, por {{post.author}}</p>
+        <p class="conteudo-post">{{post.body|linebreaks|truncatewords:10}}</p>
+    </a>
+</section>
+
+{% endfor %}
+{% endblock %}
