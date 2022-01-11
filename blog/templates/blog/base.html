@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/cabecalho.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rodape.css' %}"">
     <link rel="stylesheet" href="{% static 'css/conteudo-posts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -20,18 +22,18 @@
     <header class="cabecalho">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" id="cabecalho-titulo" id="cabecalho-titulo" href="{% url 'blog:list' %}">DEV SRN</a>
+              <a class="navbar-brand" id="cabecalho-titulo" href="{% url 'blog:list' %}">DEV SRN</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <li class="nav-item" id="nav-item">
                     {% block linkCabecalho %}{% endblock %}
                     <!--  -->
                   </li>
                 </ul>
-                <span class="navbar-text">
+                <span class="navbar-text" id="cabecalho-subtitulo">
                   O lado DEV da força!
                 </span>
               </div>
@@ -39,11 +41,19 @@
           </nav>
     </header>
     <main class="conteudo">
-        <section class="conteudo-posts">
-            {% block conteudo %}{% endblock %}
+        <h2 class="titulo-secao">Posts</h2>
+        <section class="conteudo-posts img-fundo">
+          {% block conteudo %}{% endblock %}
+        </section>
+        <section class="conteudo-sobre-nos">
+          <h2 class="titulo-secao" id="sobre-nos">O lado DEV da força</h2>
+          <p class="texto">O DEV SRN é uma equipe composta 100% de alunos dispostos a compartilhar conhecimento e experiências no mundo computação de forma simples e intuitiva</p>
+          <a href="mailto:devsrn@outlook.com?subject=Olá, eu gostaria de participar do lado DEV da força." class="conteudo-sobre-nos-link">Junte-se à nós</a>
         </section>
     </main>
-    <footer class="rodape"></footer>
+    <footer class="rodape">
+      <h5 class="rodape-copy">&copy;DEV SRN 2022</h5>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

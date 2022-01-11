@@ -2,11 +2,11 @@
 
 {% block title %} {{post.title}} {% endblock %}
 
-{%block linkCabecalho%} <a class="nav-link cabecalho-link" href="{% url 'blog:list' %}">Voltar aos posts</a> {% endblock %}
+{%block linkCabecalho%} <a class="nav-link" id="cabecalho-link" href="{% url 'blog:list' %}">Voltar aos posts</a> {% endblock %}
 
 {% block conteudo %}
 
-<section class="post">
+<section class="post post-detail">
     <h3 class="titulo-post">{{post.title}}</h3>
     <p class="detalhes-criacao-post">Criado em {{post.created}}, por {{post.author}}</p>
     <p class="conteudo-post">{{post.body|linebreaks}}</p>

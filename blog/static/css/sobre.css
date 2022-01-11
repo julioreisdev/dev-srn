@@ -1,0 +1,24 @@
+.conteudo-sobre-nos {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 1rem 4rem 1rem;
+    background-color: #fff;
+}
+
+.conteudo-sobre-nos-link {
+    text-align: center;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: rgb(63, 88, 143);
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+.conteudo-sobre-nos-link:hover {
+    background-color: #fff;
+    color: rgb(63, 88, 143);
+    border: 1px solid rgb(63, 88, 143);
+}

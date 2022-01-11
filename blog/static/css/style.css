@@ -1,0 +1,27 @@
+.app {
+    background-color: #fff;
+    padding-top: 80px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.img-fundo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(63, 88, 143);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.texto {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}

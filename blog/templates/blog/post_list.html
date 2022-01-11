@@ -2,7 +2,10 @@
 
 {% block title %} DEV SRN {% endblock %}
 
-{%block linkCabecalho%} <a class="nav-link cabecalho-link" href="#">Sobre Nós</a> {% endblock %}
+{%block linkCabecalho%}
+<a class="nav-link" id="cabecalho-link" href="{% url 'blog:list' %}">Home</a>
+<a class="nav-link" id="cabecalho-link" href="#sobre-nos">Sobre Nós</a>
+{% endblock %}
 
 {% block conteudo %}
 
